@@ -11,4 +11,16 @@ export default styled.button`
   border: none;
 
 
+  &:hover {
+    background: ${({ theme }) => theme.colors.primary.light};
+  }
+
+  &:active {
+    background: ${({ theme }) => theme.colors.primary.dark};
+  }
+
+  &[disabled] {
+    background: #CCC;
+    cursor: default;
+  }
 `;

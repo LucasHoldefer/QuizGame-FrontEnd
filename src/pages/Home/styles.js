@@ -16,4 +16,11 @@ export const Container = styled.div`
 
     margin-bottom: 32px;
   }
+
+
+  a {
+    text-decoration: none;
+    color: #FFF;
+  }
+
 `;
