@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
-export const Answer = styled.button`
-
+export const Container = styled.button`
   width: 100%;
   border: none;
   color: #FFF;
@@ -25,4 +24,9 @@ export const Answer = styled.button`
   &:active {
     background-color: ${({ theme }) => theme.colors.answer.dark};
   }
+
+  background-color: ${({ colorAnswer }) => colorAnswer};
+
+
+
 `;

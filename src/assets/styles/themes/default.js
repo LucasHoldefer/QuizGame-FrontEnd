@@ -11,7 +11,13 @@ export default {
       light: '#323E40',
       main: '#273032',
       dark: '#21292A',
-
     },
+    correct: {
+      main: '#00FF00',
+    },
+    wrong: {
+      main: '#FF0000',
+    },
+
   },
 };

@@ -1,20 +1,34 @@
-// import PropTypes from 'prop-types';
+import { useState } from 'react';
 
-// import { Container } from './styles';
+import PropTypes from 'prop-types';
 
-// export default function Answer({ children }) {
-//   function handleCheckAnswer() {
-//     console.log('answer');
-//   }
+import { Container } from './styles';
 
-//   return (
+export default function Answer({ answer, funct }) {
+  const [color, setColor] = useState('');
+  const [isCorrect, setIsCorrect] = useState(true);
 
-//     <Container onClick={handleCheckAnswer}>
-//       {children}
-//     </Container>
-//   );
-// }
+  function handleClickAnswer() {
+    if (answer.correct) {
+      setColor('#00ff00');
+      setIsCorrect(true);
+    } else {
+      setColor('#FF0000');
+      setIsCorrect(false);
+    }
 
-// Answer.propTypes = {
-//   children: PropTypes.node.isRequired,
-// };
+    console.log(funct);
+    // funct(answer);
+  }
+  return (
+
+    <Container onClick={handleClickAnswer} colorAnswer={color} test={isCorrect}>
+      {answer?.description}
+    </Container>
+  );
+}
+
+Answer.propTypes = {
+  answer: PropTypes.objectOf.isRequired,
+  funct: PropTypes.func.isRequired,
+};
